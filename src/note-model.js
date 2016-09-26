@@ -1,9 +1,7 @@
-function Note (message) {
-  this.note = message;
+function Note(description) {
+  this.message = description;
 }
 
 Note.prototype = {
-  printOut: function() {
-    console.log(this.note);
-  }
+  
 }
