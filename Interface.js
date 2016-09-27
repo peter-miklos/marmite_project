@@ -9,3 +9,9 @@ function createNoteOnClick() {
   console.log(myNotes.notes);
   console.log("Note created successfully");
 }
+
+function displayAddNoteMenu() {
+
+  document.getElementById("add_note").innerHTML = '<input id="a_note"><button id="submit_button" type="button" onclick="createNoteOnClick()">Create</button>';
+
+}
