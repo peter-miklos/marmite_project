@@ -9,8 +9,7 @@ function createNote(description) {
   myNotes.createNote(description);
 }
 
-function displayAddNoteMenu() {
-  function displayAddNoteForm() {
+function displayAddNoteForm() {
   var addNoteHTMLContent= '<input id="a_note"><button id="submit_button" type="button" onclick="createNoteOnClick()">Create</button>'
   document.getElementById("add_note").innerHTML = addNoteHTMLContent;
 }
