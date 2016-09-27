@@ -1,17 +1,24 @@
 var myNotes = new MyNotes();
 
 function createNoteOnClick() {
-  var x;
-
-  x = document.getElementById("a_note").value;
-
-  console.log(myNotes.createNote(x));
-  console.log(myNotes.notes);
-  console.log("Note created successfully");
+  var noteDescription = document.getElementById("a_note").value;
+  createNote(noteDdescription);
 }
 
-function displayAddNoteMenu() {
+function createNote(description) {
+  myNotes.createNote(description);
+}
 
-  document.getElementById("add_note").innerHTML = '<input id="a_note"><button id="submit_button" type="button" onclick="createNoteOnClick()">Create</button>';
+function displayAddNoteForm() {
+  var addNoteHTMLContent= '<input id="a_note"><button id="submit_button" type="button" onclick="createNoteOnClick()">Create</button>'
+  document.getElementById("add_note").innerHTML = addNoteHTMLContent;
+}
 
+function displayListOfNotes() {
+  var listOfNotes = "<div><ul>";
+  myNotes.listNotes().forEach(function(note) {
+    listOfNotes += "<li>" + note.message + "</li>";
+  })
+  listOfNotes += "</ul></div>";
+  document.getElementById("list_of_notes").innerHTML = listOfNotes;
 }
