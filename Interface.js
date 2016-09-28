@@ -4,7 +4,6 @@ window.onclick = function(e) {
   var clickTarget = e.target.id;
   if (clickTarget === "new_note") {
     _showNewNoteForm();
-    // displayAddNoteForm();
   } else if (clickTarget === "show_notes") {
     _showListOfNotes();
     displayListOfNotes();
@@ -17,6 +16,7 @@ window.onclick = function(e) {
 
 function createNoteOnClick() {
   var noteDescription = document.getElementById("a_note").value;
+
   createNote(noteDescription);
 }
 
@@ -24,7 +24,9 @@ function createNote(description) {
   myNotes.createNote(description);
   displayListOfNotes();
   _showListOfNotes();
-  document.getElementById('a_note').value = '';
+  setTimeout(function() {
+    document.getElementById('a_note').value = '';
+  });  
 }
 
 function displayListOfNotes() {
