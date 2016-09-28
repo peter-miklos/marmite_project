@@ -6,12 +6,6 @@ function interfaceSpec() {
     expect.isTrue(myNotes.createNote(message) === message);
   });
 
-  describe("displaying the note form", function() {
-    document.getElementById("test_div").innerHTML = '<div id="add_note"></div>';
-    displayAddNoteForm();
-    expect.isTrue(document.getElementById("add_note").innerHTML === '<h1>Add new note</h1><textarea class="form-control" rows="5" id="a_note"></textarea><button id="submit_button" type="button" onclick="createNoteOnClick()">Create</button>');
-  });
-
   describe("displaying an empty list of notes", function() {
     document.getElementById("test_div").innerHTML = '<div id="list_of_notes"></div>';
     displayListOfNotes();
