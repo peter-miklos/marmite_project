@@ -1,3 +1,4 @@
+window.onload = function(){
 describe("creating a note on click", function() {
   var myNotes = new MyNotesDouble();
   var message = "hello there";
@@ -31,3 +32,4 @@ describe("displaying a list of notes with 2 items", function() {
     expect.isTrue(document.getElementById("list_of_notes").innerHTML === "<div><ul><li>first note</li><li>second note</li></ul></div>");
   }, 300)
 });
+}
