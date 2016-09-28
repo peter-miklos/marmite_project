@@ -8,3 +8,11 @@
   height: 600px;
   text-shadow: 0.25px 0.25px 0.25px #000000;
 }
+
+.hidden {
+  display: none;
+}
+
+.unhidden {
+  display: block;
+}
