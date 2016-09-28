@@ -6,9 +6,37 @@
     <script src="src/note-model.js"></script>
     <script src="src/myNotes.js"></script>
     <script src="Interface.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./public/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <div id="add_note"></div>
-    <div id="list_of_notes"></div>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid" id="header">
+        <div class="navbar-header">
+          <div class="navbar-brand">
+            <span class="glyphicon glyphicon glyphicon-file"></span> My Notes
+          </div>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#" id="new_note"><span class="glyphicon glyphicon-pencil"></span> Add note</a>
+          </li>
+          <li><a href="#" id="show_notes"><span class="glyphicon glyphicon-list-alt"></span> Notes </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section class="jumbotron" id="start_page">
+      <div class="container">
+        <div class="row text-center">
+          <h1>My Notes</h1><h4>powered by Marmite TDD</h4>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <div id="add_note"></div>
+      <div id="list_of_notes"></div>
+      <div id="note_content"></div>
+    </div>
   </body>
 </html>
