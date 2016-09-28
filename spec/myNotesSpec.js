@@ -1,3 +1,4 @@
+window.onload = function(){
 describe("testing note creation and storing", function() {
   var myNotes = new MyNotes();
   var message = "my second note";
@@ -13,3 +14,4 @@ describe("list all notes", function() {
   myNotes.createNote(noteTwo);
   expect.isTrue(myNotes.listNotes().length === 2);
 });
+}

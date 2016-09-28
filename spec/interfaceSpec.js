@@ -1,3 +1,4 @@
+window.onload = function(){
 describe("creating a note on click", function() {
   var myNotes = new MyNotesDouble();
   var message = "hello there";
@@ -40,3 +41,4 @@ describe("displaying a single note", function(){
     expect.isTrue(document.getElementById("note_content").innerHTML === "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>");
   }, 30);
 });
+}
