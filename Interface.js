@@ -23,9 +23,7 @@ function createNoteOnClick() {
 function createNote(description) {
   myNotes.createNote(description);
   displayListOfNotes();
-  setTimeout(function() {
-    _showListOfNotes();
-  }, 30)
+  _showListOfNotes();
 }
 
 function displayAddNoteForm() {
