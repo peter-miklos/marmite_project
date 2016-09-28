@@ -1,4 +1,4 @@
-var myNotes;
+var myNotes = new MyNotes();
 
 window.onclick = function(e) {
   var clickTarget = e.target.id;
@@ -27,17 +27,15 @@ function createNote(description) {
 }
 
 function displayAddNoteForm() {
-  if (myNotes === undefined) { myNotes = new MyNotes; }
-  var addNoteHTMLContent= '<h1>Add new note</h1><textarea class="form-control" rows="5" id="a_note"></textarea><button id="submit_button" type="button" onclick="createNoteOnClick()">Create</button>'
+  var addNoteHTMLContent= '<h1>Add new note</h1><textarea class="form-control" rows="5" id="a_note"></textarea><button id="submit_button" type="button" onclick="createNoteOnClick()">Create</button>';
   document.getElementById("add_note").innerHTML = addNoteHTMLContent;
 }
 
 function displayListOfNotes() {
-  if (myNotes === undefined) { myNotes = new MyNotes; }
   var listOfNotes = "<h1>Notes</h1><div><ul>";
   myNotes.listNotes().forEach(function(note, index) {
     listOfNotes += "<li><a href='#' id='note_id_" + index + "'>" + note.message.slice(0,20) + "</a></li>";
-  })
+  });
   listOfNotes += "</ul></div>";
   document.getElementById("list_of_notes").innerHTML = listOfNotes;
 }
