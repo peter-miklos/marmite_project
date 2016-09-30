@@ -1,14 +1,13 @@
 function myNotesSpec() {
   describe("testing note creation and storing", function() {
-    var myNotes = new MyNotes();
+    var myNotes = new MyNotes(NoteDouble);
     var message = "my second note";
     myNotes.createNote(message);
-    console.log("i am running testing note creation and storing")
     expect.isTrue(myNotes.notes[0].message === message);
   });
 
   describe("list all notes", function() {
-    var myNotes = new MyNotes();
+    var myNotes = new MyNotes(NoteDouble);
     var noteOne = "note one";
     var noteTwo = "note two";
     myNotes.createNote(noteOne);

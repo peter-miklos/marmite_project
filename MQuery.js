@@ -11,7 +11,6 @@ function createNote(description) {
 
 function createNoteOnClick() {
   var noteDescription = document.getElementById("a_note").value;
-
   createNote(noteDescription);
 }
 
